@@ -1,0 +1,292 @@
+{
+	"info": {
+		"_postman_id": "83592c43-adfc-42d6-b36b-bead89011653",
+		"name": "movie_challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/imdb?titulo=spider",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/imdb?titulo=spider",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"imdb"
+					],
+					"query": [
+						{
+							"key": "titulo",
+							"value": "spider"
+						}
+					]
+				},
+				"description": "Busca filme por titulo"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/grupo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Grupo do Luiz\",\n    \"visibilidade\": true,\n    \"userId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/grupo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"grupo"
+					]
+				},
+				"description": "Criação de grupos"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/grupo/comentario/1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"comentario\": \"Check mate\",\n    \"userId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/grupo/comentario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"grupo",
+						"comentario",
+						"1"
+					]
+				},
+				"description": "Criação de comentário dentro do grupo"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/desejo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"tt0145487\",\n    \"userId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/desejo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"desejo"
+					]
+				},
+				"description": "Adição novo filme na lista de desejo"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/desejo?genero=action, adventure&idUsuario=1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/desejo?genero=action, adventure&idUsuario=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"desejo"
+					],
+					"query": [
+						{
+							"key": "diretor",
+							"value": "Nolan",
+							"disabled": true
+						},
+						{
+							"key": "autor",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "genero",
+							"value": "action, adventure"
+						},
+						{
+							"key": "idUsuario",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Filtra na lista de desejo"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/desejo/avaliar/1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nota\": 5.0,\n    \"estrela\": 3,\n    \"comentario\": \"Bom\",\n    \"privacidade\": true,\n    \"userId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/desejo/avaliar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"desejo",
+						"avaliar",
+						"1"
+					]
+				},
+				"description": "Cria avaliação na lista de desejo"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/desejo/avaliar/1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nota\": 5.0,\n    \"estrela\": 3,\n    \"comentario\": \"regular\",\n    \"privacidade\": true,\n    \"userId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/desejo/avaliar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"desejo",
+						"avaliar",
+						"1"
+					]
+				},
+				"description": "Atualiza as informações da avaliação"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/meajude",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 1,\n    \"titulo\": \"O mais top\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/meajude",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"meajude"
+					]
+				},
+				"description": "Cria pedido de sugestão"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/meajude/sugestao/1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nota\": 6,\n    \"estrela\": 2,\n    \"imdbId\": \"tt0372784\",\n    \"userId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/meajude/sugestao/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"meajude",
+						"sugestao",
+						"1"
+					]
+				},
+				"description": "Faz indicação dentro do pedido de ajuda"
+			},
+			"response": []
+		}
+	]
+}
