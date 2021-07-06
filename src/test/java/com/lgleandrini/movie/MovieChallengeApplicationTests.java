@@ -1,4 +1,4 @@
-package com.lgleandrini.movie;
+package com.challenge.movie;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

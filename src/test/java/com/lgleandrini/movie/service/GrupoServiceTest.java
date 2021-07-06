@@ -1,4 +1,4 @@
-package com.lgleandrini.movie.service;
+package com.challenge.movie.service;
 
 import static org.junit.Assert.assertEquals;
 
@@ -15,8 +15,8 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.lgleandrini.movie.model.ComentarioModel;
-import com.lgleandrini.movie.model.GrupoModel;
+import com.challenge.movie.model.ComentarioModel;
+import com.challenge.movie.model.GrupoModel;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @RunWith(SpringRunner.class)

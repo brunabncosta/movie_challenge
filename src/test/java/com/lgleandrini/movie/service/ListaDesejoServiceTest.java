@@ -1,4 +1,4 @@
-package com.lgleandrini.movie.service;
+package com.challenge.movie.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -17,8 +17,8 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.lgleandrini.movie.model.AvaliacaoModel;
-import com.lgleandrini.movie.model.FilmeIdModel;
+import com.challenge.movie.model.AvaliacaoModel;
+import com.challenge.movie.model.FilmeIdModel;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @RunWith(SpringRunner.class)

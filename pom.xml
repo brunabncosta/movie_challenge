@@ -9,7 +9,7 @@
 		<version>2.4.2</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.lgleandrini</groupId>
+	<groupId>com.challenge</groupId>
 	<artifactId>movie_challenge</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>movie_challenge</name>

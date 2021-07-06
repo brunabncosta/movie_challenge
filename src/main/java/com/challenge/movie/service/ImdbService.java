@@ -1,0 +1,23 @@
+package com.challenge.movie.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.challenge.movie.model.ImdbModel;
+import com.challenge.movie.request.ImdbRequests;
+
+@Service
+public class ImdbService {
+	
+	@Autowired
+	private ImdbRequests imdbRequests;
+	
+	public ResponseEntity<List<ImdbModel>> buscarImdb(String titulo) {
+		return new ResponseEntity<List<ImdbModel>>(imdbRequests.buscaImdb(titulo), HttpStatus.ACCEPTED);
+	}
+
+}

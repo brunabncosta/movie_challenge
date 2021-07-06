@@ -1,4 +1,4 @@
-package com.lgleandrini.movie.service;
+package com.challenge.movie.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
